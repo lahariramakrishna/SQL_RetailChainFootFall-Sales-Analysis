@@ -99,7 +99,7 @@ SELECT entry_date, DAYNAME(entry_date) AS day, HOUR(entry_time) AS hour
 FROM RetailFootfall;
 ```
 
-#### ✅ 4. CASE Statement (Age Grouping)
+#### ✅ 4. If age<25.Display 'YOUNG' else if age is between 25 and 40.Display 'ADULT' or else 'SENIOR' Using CASE Statement
 ```sql
 SELECT name, age,
   CASE 
@@ -122,7 +122,7 @@ WHERE customer_id = (
 );
 ```
 
-#### ✅ 6. DISTINCT, ORDER BY, LIMIT
+#### ✅ 6. Display the 5 records which has distinct category in order.
 ```sql
 SELECT DISTINCT category 
 FROM RetailFootfall 
@@ -130,7 +130,7 @@ ORDER BY category
 LIMIT 5;
 ```
 
-#### ✅ 7. GROUP BY + HAVING
+#### ✅ 7.Write an SQL query to find all product categories from the RetailFootfall table that have been purchased more than once. The result should include the category name and the number of purchases for each.
 ```sql
 SELECT category, COUNT(*) AS purchases
 FROM RetailFootfall
